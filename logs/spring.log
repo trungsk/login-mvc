@@ -1,0 +1,39 @@
+2023-03-10 10:29:50.581  INFO 11352 --- [restartedMain] com.demo.AllApplication                  : Starting AllApplication using Java 1.8.0_211 on BNK-ITSOL-0489 with PID 11352 (D:\ALL\all\target\classes started by itsol.trung.nt in D:\ALL\all)
+2023-03-10 10:29:50.585  INFO 11352 --- [restartedMain] com.demo.AllApplication                  : No active profile set, falling back to default profiles: default
+2023-03-10 10:29:50.644  INFO 11352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-10 10:29:50.644  INFO 11352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-10 10:29:51.564  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-10 10:29:51.565  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-03-10 10:29:51.573  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-03-10 10:29:51.580  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-10 10:29:51.580  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-10 10:29:51.586  INFO 11352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2023-03-10 10:29:52.090  INFO 11352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-03-10 10:29:52.097  INFO 11352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-10 10:29:52.097  INFO 11352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-10 10:29:52.162  INFO 11352 --- [restartedMain] o.a.c.c.C.[.[.[/ASEAN_CLEARING_OUT_API]  : Initializing Spring embedded WebApplicationContext
+2023-03-10 10:29:52.162  INFO 11352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1508 ms
+2023-03-10 10:29:52.313  WARN 11352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-03-10 10:29:52.317  INFO 11352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-10 10:29:52.341  INFO 11352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-10 10:29:52.362 ERROR 11352 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
